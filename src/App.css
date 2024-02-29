@@ -11,3 +11,28 @@
   font-family: "Roboto Condensed", sans-serif !important;
   font-weight: 600 !important;
 }
+
+.desc {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.mockup {
+  width: 70%;
+  height: auto;
+}
+
+.appIcon {
+  width: 30% !important;
+  height: auto;
+}
+
+.aboutRow {
+  background-color: #F7F5DD!important;
+}
+
+.colDesc {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
