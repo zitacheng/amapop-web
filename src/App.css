@@ -17,6 +17,11 @@
   font-weight: 600 !important;
 }
 
+.sub {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 300 !important;
+}
+
 .mockup {
   width: 70%;
   height: auto;
@@ -25,14 +30,68 @@
 .appIcon {
   width: 30% !important;
   height: auto;
+  cursor: pointer;
+}
+
+.howIcon {
+  width: 40% !important;
+  height: auto;
 }
 
 .aboutRow {
-  background-color: #F7F5DD!important;
+  background-color: #EDE3E4!important;
+  /* background-color: #F7F5DD!important; */
 }
 
 .colDesc {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.howRow {
+  /* background-color: #FFF5F6!important; */
+  background-color: #031927!important;
+
+}
+
+.footer {
+  background-color: black!important;
+}
+
+.text-footer {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 200 !important;
+}
+
+.rotate-in-up-left {
+  animation: rotate-in-up-left 2s ease 1;
+}
+@keyframes rotate-in-up-left {
+  0% {
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.bounce-in-left {
+  animation: bounce-in-left 2s ease 1;
+}
+@keyframes bounce-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
 }
