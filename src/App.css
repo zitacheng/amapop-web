@@ -39,7 +39,7 @@
 }
 
 .aboutRow {
-  background-color: #EDE3E4!important;
+  /* background-color: #EDE3E4!important; */
   /* background-color: #F7F5DD!important; */
 }
 
@@ -51,8 +51,13 @@
 
 .howRow {
   /* background-color: #FFF5F6!important; */
-  background-color: #031927!important;
+  /* background-color: #574144!important; */
+  /* background-color: #031927!important; */
 
+}
+
+.rowMission {
+  /* background-color: #ede3e4!important; */
 }
 
 .footer {
@@ -94,4 +99,21 @@
   }
   80% { transform: translateX(10px); }
   100% { transform: translateX(0); }
+}
+
+.cardBg {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-height: 350px;
+}
+
+.gelatine {
+  animation: gelatine 1.5s 1;
+}
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
 }

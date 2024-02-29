@@ -7,6 +7,9 @@ import add from './assets/add.png';
 import glass from './assets/glass.png';
 import chat from './assets/chat.png';
 import exchange from './assets/exchange.png';
+import whatsapp from './assets/whatsapp.png';
+import like from './assets/like.png';
+import user from './assets/user.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -34,6 +37,7 @@ function App() {
           <Nav className="">
             <Nav.Link className="menuItem" href="#about">À propos</Nav.Link>
             <Nav.Link className="menuItem"href="#how">Comment ça marche</Nav.Link>
+            <Nav.Link className="menuItem"href="#why">Pourquoi</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -49,7 +53,7 @@ function App() {
             <h3 className="align-middle desc">AMAPOP</h3>
             <p className="align-middle desc mb-1">L'application parfait pour faire des échanges de popmart qu'on a en doublon sur Paris 📍.</p>
             <p className="align-middle desc mb-1">Si l'app est un succès, j'ajouterais le messagerie, un forum et pourquoi pas split set 😊.</p>
-            <p className="align-middle sub mb-1 px-4 mt-3">Je fais parti du groupe whatsapp popmart, le but est de faciliter les échanges sans avoir trop de messages qui font partir les popmart à échanger.</p>
+            <p className="align-middle sub mb-1 px-4 mt-3">Je suis dans le groupe whatsapp popmart, des fois je ne trouve plus les popmarts que les gens veulent échanger, et les nouveaux membres ne vois pas les anciens messages.</p>
             <Row className="mx-0 justify-content-center mt-3">
               <Image className="appIcon" src={apple} onClick={() => {}}/>
               <Image className="appIcon" src={google} onClick={() => {}}/>
@@ -58,27 +62,61 @@ function App() {
         </Col>
       </Row>
       <Col className="mx-0 howRow"  id="how">
-        <h2 className="desc py-3 text-white">Comment ça marche ?</h2>
-        <Row className="mx-0 py-4">
+        <h2 className="desc py-3 ">Comment ça marche ?</h2>
+        <Row className="mx-0 py-4 py-2">
           <Col md={3} sm={6}>
-            <Image className="howIcon rotate-in-up-left" src={add} />
-            <h4 className="desc text-white mt-4">Ajoute</h4>
-            <p className="text-white desc">Crée toi un compte et ajoute le popmart en remplissant bien les caractéristiques pour qu'on puisse mieux les retrouver.</p>
+            <div className="cardBg gelatine p-4">
+              <Image className="howIcon" src={add} />
+              <h4 className="desc mt-4">Ajoute</h4>
+              <p className="mt-3 desc">Crée toi un compte et ajoute le popmart en remplissant bien les caractéristiques pour qu'on puisse mieux les retrouver.</p>
+            </div>
           </Col>
           <Col md={3} sm={6}>
-            <Image className="howIcon rotate-in-up-left" src={exchange} />
-            <h4 className="desc text-white mt-4">Échanger ou recherche</h4>
-            <p className="text-white desc">Défini si tu veux l'échanger ou tu recherche ce modèle, pour faciliter tu peux aussi mettre une image qui contient tout ceux que tu recherche.</p>
+            <div className="cardBg gelatine p-4">
+              <Image className="howIcon" src={exchange} />
+              <h4 className="desc mt-4">Échanger ou recherche</h4>
+              <p className="mt-3 desc">Défini si tu veux l'échanger ou tu recherche ce modèle, pour faciliter tu peux aussi mettre une image qui contient tout ceux que tu recherche.</p>
+            </div>
           </Col>
           <Col md={3} sm={6}>
-            <Image className="howIcon rotate-in-up-left" src={glass} />
-            <h4 className="desc text-white mt-4">Recherche</h4>
-            <p className="text-white desc">Cherche le popmart qui t'intéresse par nom de série/modèle ou juste regarde si y 'en a un qui t'intéresse qui est publié dans la journée.</p>
+            <div className="cardBg gelatine p-4">
+              <Image className="howIcon" src={glass} />
+              <h4 className="desc  mt-4">Recherche</h4>
+              <p className="mt-3 desc">Cherche le popmart qui t'intéresse par nom de série/modèle ou juste regarde si y 'en a un qui t'intéresse qui est publié dans la journée.</p>
+            </div>
           </Col>
           <Col md={3} sm={6}>
-            <Image className="howIcon rotate-in-up-left" src={chat} />
-            <h4 className="desc text-white mt-4">Message</h4>
-            <p className="text-white desc">Envoi un message à la personne qui échange, tu peux aussi regarde sur son profil ceux qu'elle recherche. Le popmart peut aussi être réserver.</p>
+            <div className="cardBg gelatine p-4">
+              <Image className="howIcon" src={chat} />
+              <h4 className="desc mt-4">Message</h4>
+              <p className="mt-3 desc">Envoi un message à la personne qui échange, tu peux aussi regarde sur son profil ceux qu'elle recherche. Le popmart peut aussi être réserver.</p>
+            </div>
+          </Col>
+        </Row>
+      </Col>
+      <Col className="mx-0 rowMission"  id="why">
+        <h2 className="desc py-3 ">Pourquoi utilisé Amapop</h2>
+        <Row className="mx-0 py-4 justify-content-center">
+          <Col md={3} sm={6}>
+            <div className="cardBg gelatine p-4">
+              <Image className="howIcon" src={whatsapp} />
+              <h4 className="desc  mt-4">Surcharge message</h4>
+              <p className=" desc">Des fois il y a trop de messages, tu ne trouve plus les popmart à échanger.</p>
+            </div>
+          </Col>
+          <Col md={3} sm={6}>
+            <div className="cardBg gelatine p-4">
+              <Image className="howIcon" src={user} />
+              <h4 className="desc  mt-4">Nouveaux membre</h4>
+              <p className=" desc">Les nouveaux membres ne vois pas les anciens messages, donc les anciens popmart à échanger.</p>
+            </div>
+          </Col>
+          <Col md={3} sm={6}>
+            <div className="cardBg gelatine p-4">
+              <Image className="howIcon" src={like} />
+              <h4 className="desc  mt-4">Filtrer</h4>
+              <p className=" desc">Tu veux voir que les série de popmart qui t'intéresse.</p>
+            </div>
           </Col>
         </Row>
       </Col>
