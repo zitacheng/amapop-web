@@ -1,0 +1,39 @@
+name: Reusable workflow build
+
+on:
+    push:
+        branches:
+        - main
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to registry
+        # This is where you will update the PAT to PAT_TOKEN
+        run: echo "${{ secrets.PAT_TOKEN }}" | docker login ghcr.io -u athomaj --password-stdin
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        env:
+          IMG_NAME: ghcr.io/athomaj/amapop-front
+        with:
+          context: ./
+          push: true
+          tags: ghcr.io/athomaj/amapop-front:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - uses: actions-hub/kubectl@master
+        env:
+              KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+        with:
+              args: rollout restart deployment/amapop-front
+  
