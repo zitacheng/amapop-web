@@ -97,7 +97,7 @@ function App() {
         </Row>
       </Col>
       <Col className="mx-0 rowMission"  id="why">
-        <h1 className="desc py-3 text-white title">Pourquoi utilisé Amapop</h1>
+        <h1 className="desc py-3 text-white title">Pourquoi utiliser Amapop</h1>
         <Row className="mx-0 py-4 justify-content-center">
           <Col md={3} sm={6}>
             <div className="cardBg mb-3 gelatine p-4">
