@@ -100,21 +100,21 @@ function App() {
         <h1 className="desc py-3 text-white title">Pourquoi utiliser Amapop</h1>
         <Row className="mx-0 py-4 justify-content-center">
           <Col md={3} sm={6}>
-            <div className="cardBg mb-3 gelatine p-4">
+            <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={whatsapp} />
               <h4 className="desc  mt-4">Surcharge message</h4>
               <p className=" desc">Il existe un groupe whatsapp, mais des fois il y a trop de messages, tu ne trouve plus les popmart à échanger.</p>
             </div>
           </Col>
           <Col md={3} sm={6}>
-            <div className="cardBg mb-3 gelatine p-4">
+            <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={user} />
               <h4 className="desc  mt-4">Nouveaux membre</h4>
               <p className=" desc">Les nouveaux membres ne vois pas les anciens messages, donc les anciens popmart à échanger.</p>
             </div>
           </Col>
           <Col md={3} sm={6}>
-            <div className="cardBg mb-3 gelatine p-4">
+            <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={like} />
               <h4 className="desc  mt-4">Filtrer</h4>
               <p className=" desc">Grâce aux filtrage de l'application retrouve les popmart qui t'intéresse rapidement et simplement.</p>
