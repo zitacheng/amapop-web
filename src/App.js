@@ -66,28 +66,28 @@ function App() {
       <Col className="mx-0 howRow"  id="how">
         <h1 className="desc text-white py-3 title">Comment ça marche ?</h1>
         <Row className="mx-0 py-4 py-2">
-          <Col md={3} sm={6}>
+          <Col lg={3} md={4} sm={6}>
             <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={add} />
               <h4 className="desc mt-4">Ajoute</h4>
               <p className="mt-3 desc">Crée toi un compte et ajoute le popmart en remplissant bien les caractéristiques pour qu'on puisse mieux les retrouver.</p>
             </div>
           </Col>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={4} sm={6}>
             <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={exchange} />
               <h4 className="desc mt-4">Échanger ou recherche</h4>
               <p className="mt-3 desc">Défini si tu veux l'échanger ou tu recherche ce modèle, pour faciliter tu peux aussi mettre une image qui contient tout ceux que tu recherche.</p>
             </div>
           </Col>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={4} sm={6}>
             <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={glass} />
               <h4 className="desc  mt-4">Recherche</h4>
               <p className="mt-3 desc">Cherche le popmart qui t'intéresse par nom de série/modèle ou juste regarde si y 'en a un qui t'intéresse qui est publié dans la journée.</p>
             </div>
           </Col>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={4} sm={6}>
             <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={chat} />
               <h4 className="desc mt-4">Message</h4>
@@ -99,21 +99,21 @@ function App() {
       <Col className="mx-0 rowMission"  id="why">
         <h1 className="desc py-3 text-white title">Pourquoi utiliser Amapop</h1>
         <Row className="mx-0 py-4 justify-content-center">
-          <Col md={3} sm={6}>
+          <Col lg={3} md={4} sm={6}>
             <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={whatsapp} />
               <h4 className="desc  mt-4">Surcharge message</h4>
               <p className=" desc">Il existe un groupe whatsapp, mais des fois il y a trop de messages, tu ne trouve plus les popmart à échanger.</p>
             </div>
           </Col>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={4} sm={6}>
             <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={user} />
               <h4 className="desc  mt-4">Nouveaux membre</h4>
               <p className=" desc">Les nouveaux membres ne vois pas les anciens messages, donc les anciens popmart à échanger.</p>
             </div>
           </Col>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={4} sm={6}>
             <div className="cardBg mb-3 gelatine p-4 mx-auto">
               <Image className="howIcon" src={like} />
               <h4 className="desc  mt-4">Filtrer</h4>
