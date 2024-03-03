@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  background-image: linear-gradient(to left bottom, #ef486c, #ef4e87, #e959a2, #df66ba, #d074d0, #b989e7, #9e9cf7, #83acff, #69c2ff, #6bd4fc, #87e3f2, #abf0eb);}
+  background-image: linear-gradient(to left bottom, #ef486c, #ef4e87, #e959a2, #df66ba, #d074d0, #b989e7, #9e9cf7, #83acff, #69c2ff, #6bd4fc, #87e3f2, #abf0eb);
+  background-repeat: no-repeat;
+}
 
 .navbarTop {
   background-color: rgba(255,255,255,0.6) !important;
@@ -122,4 +124,13 @@
   25% { transform: scale(0.9, 1.1); }
   50% { transform: scale(1.1, 0.9); }
   75% { transform: scale(0.95, 1.05); }
+}
+
+.passBody {
+  min-height: 88vh;
+}
+
+.pinkBtn {
+  background: #ef4a74 !important;
+  border-color: transparent !important;
 }
