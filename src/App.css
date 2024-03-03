@@ -116,6 +116,12 @@
   width: 90%;
 }
 
+.cardBgPass {
+  background-color:  rgba(255,255,255,0.9);
+  border-radius: 25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 .gelatine {
   animation: gelatine 1.5s 1;
 }
@@ -126,11 +132,22 @@
   75% { transform: scale(0.95, 1.05); }
 }
 
-.passBody {
-  min-height: 88vh;
+.passBg {
+  min-height: 100vh;
 }
 
 .pinkBtn {
   background: #ef4a74 !important;
   border-color: transparent !important;
+}
+
+.logo {
+  width: 130px !important;
+  height: auto;
+  cursor: pointer;
+}
+
+.cgu {
+  color: white !important;
+  text-decoration-color: white !important;
 }
