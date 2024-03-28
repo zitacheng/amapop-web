@@ -4,7 +4,22 @@ on:
     push:
         branches:
         - main
+    workflow_call:
+      outputs:
+        timestamp:
+          description: "API URL"
+          value: ${{ jobs.get-repo-name.outputs.timestamp }}
+      
 jobs:
+  get-repo-name:
+    runs-on: ubuntu-latest
+    outputs:
+      timestamp: ${{ steps.get_timestamp.outputs.timestamp }}
+    steps:
+        - name: get_timestamp
+          id: get_timestamp
+          run: |
+              echo "timestamp=$(date --utc +%FT%H-%M-%SZ)" >> $GITHUB_OUTPUT
   build-push:
     runs-on: ubuntu-latest
     permissions:
@@ -25,11 +40,10 @@ jobs:
         uses: docker/build-push-action@v5
         env:
           IMG_NAME: ghcr.io/athomaj/amapop-front
-          TS: echo $(date --utc +%FT%H-%M-%SZ)
         with:
           context: ./
           push: true
-          tags: ghcr.io/athomaj/amapop-front:prod-${{env.TS}}
+          tags: ghcr.io/athomaj/amapop-front:prod-${{ needs.get-repo-name.outputs.timestamp }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
       # - uses: actions-hub/kubectl@master
