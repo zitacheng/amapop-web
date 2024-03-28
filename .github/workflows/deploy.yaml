@@ -22,6 +22,7 @@ jobs:
               echo "timestamp=$(date --utc +%FT%H-%M-%SZ)" >> $GITHUB_OUTPUT
   build-push:
     runs-on: ubuntu-latest
+    needs: [get-repo-name]
     permissions:
       packages: write
       contents: read
