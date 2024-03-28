@@ -25,10 +25,11 @@ jobs:
         uses: docker/build-push-action@v5
         env:
           IMG_NAME: ghcr.io/athomaj/amapop-front
+          TS: $(date --utc +%FT%H-%M-%SZ)
         with:
           context: ./
           push: true
-          tags: ghcr.io/athomaj/amapop-front:prod-$(date --utc +%FT%H-%M-%SZ)
+          tags: ghcr.io/athomaj/amapop-front:prod-${{env.TS}}
           cache-from: type=gha
           cache-to: type=gha,mode=max
       # - uses: actions-hub/kubectl@master
