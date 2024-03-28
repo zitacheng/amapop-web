@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v5
         env:
           IMG_NAME: ghcr.io/athomaj/amapop-front
-          TS: date --utc +%FT%H-%M-%SZ
+          TS: echo $(date --utc +%FT%H-%M-%SZ)
         with:
           context: ./
           push: true
